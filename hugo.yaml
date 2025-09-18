@@ -1,0 +1,63 @@
+baseURL: "https://blog.golawski.dev/"
+languageCode: en-us
+title: "Bloglawski"
+theme: "PaperMod"
+
+pagination:
+  pagerSize: 10
+enableRobotsTXT: true
+
+permalinks:
+  dev: "/dev/:slug/"
+  cybersec: "/cybersec/:slug/"
+  general: "/general/:slug/"
+
+taxonomies:
+  tag: tags
+  category: categories
+
+params:
+  DateFormat: "2 Jan 2006"
+  defaultTheme: dark
+  disableThemeToggle: true
+  mainSections: ["dev", "cybersec", "general"]
+  ShowReadingTime: true
+  # ShowShareButtons: true
+  ShowBreadCrumbs: true
+  assets:
+    css:
+      - css/overrides.css
+
+  homeInfoParams:
+    Title: "Welcome"
+    Content: to my own corner of the internet, where I hope to capture how my brain works when it comes to developing and breaking software.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/RobertGolawski"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/robert-golawski/"
+    - name: cv
+      url: "https://robertgolawski.com/"
+
+menu:
+  main:
+    - name: Dev
+      pageRef: /dev
+      weight: 10
+    - name: Cybersec
+      pageRef: /cybersec
+      weight: 20
+    - name: General Tech
+      pageRef: /general
+      weight: 30
+    - name: Tags
+      pageRef: /tags
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false

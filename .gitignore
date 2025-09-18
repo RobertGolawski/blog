@@ -1,0 +1,21 @@
+# Hugo build artifacts
+/public/
+/resources/
+/.hugo_build.lock
+/.hugo_cache/
+
+# Local tooling
+bin/
+/dist/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Env files and local service configs
+.env
+.env.*
+.netlify
+.vercel

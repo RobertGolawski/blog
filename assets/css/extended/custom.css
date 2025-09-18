@@ -1,0 +1,48 @@
+:root {
+  --accent-color: #ff7d00;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.first-entry {
+  margin: 0px;
+  min-height: 180px;
+}
+
+.first-entry .entry-content {
+  margin-top: 0px;
+}
+
+.post-entry {
+  box-shadow: 2px 2px black;
+}
+
+.post-entry:hover {
+  box-shadow: none;
+  border: 1px solid var(--accent-color);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.page-header {
+  margin-top: 0px;
+}
+
+.post-description {
+  margin: 0px;
+  font-size: 16px;
+}
+
+#menu .active {
+  border-bottom: none;
+  color: var(--accent-color);
+}
+
+/* h1 { */
+/*   text-shadow: 1px 1px  black; */
+/* } */
