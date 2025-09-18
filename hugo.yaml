@@ -45,7 +45,7 @@ menu:
     - name: Dev
       pageRef: /dev
       weight: 10
-    - name: Cybersec
+    - name: CyberSec
       pageRef: /cybersec
       weight: 20
     - name: General Tech
