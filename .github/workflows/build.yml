@@ -29,11 +29,20 @@ jobs:
         with:
           name: public
           path: public
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-22.04
-  #   steps:
-  # - uses: actions/download-artifact@v4
-  #   with:
-  #     name: public
-  #     path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: public
+          path: public
+
+      - name: Install Netlify CLI
+        run: npm i -g netlify-cli
+
+      - name: Deploy to Netlify
+        run: netlify deploy --dir=public --prod --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
