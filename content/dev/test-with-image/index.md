@@ -1,9 +1,11 @@
 ---
-title: "Test with image"
-slug: "test-with-image"
-date: "2025-09-18T09:16:14+01:00"
-draft: true
-tags: [image, dev]
+title: Test with image
+slug: test-with-image
+date: 2025-09-18T09:16:14+01:00
+draft: false
+tags:
+  - image
+  - dev
 description: ""
 ---
 ge
